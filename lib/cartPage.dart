@@ -2,13 +2,24 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 
 class CartPage extends StatelessWidget {
-  List<String> cart = [];
+  List<String> cart = ['', '', '', '', '', '', '', ''];
   List<bool> cartBool = [];
+  List<String> itemsNames = [
+    'Lettuce',
+    'Tomato',
+    'Cucumber',
+    'Milk',
+    'Eggs',
+    'Rice',
+    'Sugar',
+    'Bread',
+    'Cheese'
+  ];
   List<Widget> funct(int index) {
     List<Widget> _Widgets = [];
     if (cart.length != 0) {
       if (cart[index] != "") {
-        var x = cart[index];
+        var x = itemsNames[index];
         _Widgets.add(Image.asset("images/$x.jpg"));
         _Widgets.add(Text(x));
         _Widgets.add(Container(
